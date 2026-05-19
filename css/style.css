@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #000;
+  border-bottom: 1px solid #222;
+}
+
+.menu {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.links-menu {
+  display: flex;
+  gap: 24px;
+}
+
+.links-menu a {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.links-menu a:hover {
+  color: #fff;
+}
+
+.secao {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.secao-alternada {
+  max-width: 100%;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  background: #080808;
+}
+
+.secao-alternada > * {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tag {
+  display: inline-block;
+  width: fit-content;
+  border: 1px solid #fff;
+  padding: 8px 14px;
+  margin-bottom: 24px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h1 {
+  max-width: 900px;
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: 0.95;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+h2 {
+  margin-top: 16px;
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+h3 {
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.texto,
+.descricao-principal {
+  max-width: 780px;
+  margin-top: 24px;
+  color: #ccc;
+  font-size: 18px;
+}
+
+.descricao-principal {
+  border-left: 1px solid #fff;
+  padding-left: 20px;
+}
+
+.numero-secao {
+  color: #777;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.botao {
+  display: inline-block;
+  border: 1px solid #fff;
+  padding: 12px 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.botao-claro {
+  background: #fff;
+  color: #000;
+}
+
+.botao-claro:hover {
+  background: #000;
+  color: #fff;
+}
+
+.botao-escuro {
+  background: #000;
+  color: #fff;
+}
+
+.botao-escuro:hover {
+  background: #fff;
+  color: #000;
+}
+
+.grid-sobre {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.caixa,
+.card {
+  border: 1px solid #222;
+  background: #000;
+  padding: 28px;
+}
+
+.caixa p {
+  color: #ccc;
+  margin-top: 12px;
+}
+
+.grid-cards {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #222;
+  border: 1px solid #222;
+}
+
+.card {
+  border: none;
+}
+
+.card p {
+  color: #bbb;
+}
+
+.categoria {
+  color: #777;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.linha-do-tempo {
+  margin-top: 40px;
+  border: 1px solid #222;
+}
+
+.experiencia {
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  gap: 24px;
+  padding: 28px;
+  border-bottom: 1px solid #222;
+}
+
+.experiencia:last-child {
+  border-bottom: none;
+}
+
+.experiencia span {
+  color: #777;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.experiencia p {
+  color: #bbb;
+  margin-top: 8px;
+}
+
+.contato {
+  max-width: 100%;
+  background: #fff;
+  color: #000;
+}
+
+.contato > * {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contato p {
+  max-width: 780px;
+  margin-top: 24px;
+  font-size: 18px;
+}
+
+.contato .botao-claro {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.contato .botao-escuro {
+  background: #fff;
+  color: #000;
+  border-color: #000;
+}
+
+.contato .botao:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 768px) {
+  .links-menu {
+    display: none;
+  }
+
+  .grid-sobre,
+  .experiencia {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .secao {
+    padding: 64px 20px;
+  }
+}
