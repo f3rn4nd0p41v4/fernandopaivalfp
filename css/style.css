@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe WP", "Segoe UI", Arial, Helvetica, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -480,3 +480,4 @@ h3 {
     font-size: 42px;
   }
 }
+
