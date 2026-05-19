@@ -384,11 +384,16 @@ h3 {
 
 .contato {
   max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  display: grid;
+  grid-template-columns: minmax(24px, 1fr) minmax(0, 1120px) minmax(24px, 1fr);
   background: var(--text);
   color: #000;
 }
 
 .contato > * {
+  grid-column: 2;
   margin-left: 0;
   margin-right: 0;
 }
@@ -433,6 +438,10 @@ h3 {
 }
 
 @media (max-width: 700px) {
+  .contato {
+    grid-template-columns: minmax(20px, 1fr) minmax(0, 1120px) minmax(20px, 1fr);
+  }
+
   .menu {
     align-items: flex-start;
   }
@@ -572,4 +581,5 @@ h3 {
 .voltar:hover {
   color: var(--text);
 }
+
 
