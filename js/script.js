@@ -27,3 +27,72 @@ if (menuBotao && linksMenu) {
     menuBotao.setAttribute("aria-expanded", String(estaAberto));
   });
 }
+const estudos = document.querySelectorAll(".estudo-caso[data-case]");
+const indiceTopicos = document.querySelectorAll(".docs-indice a[data-topic]");
+const linksEstudos = document.querySelectorAll(".docs-case-nav a[data-case-link]");
+const artigoEstudos = document.querySelector(".docs-artigo");
+
+const mostrarEstudo = (caseId, options = {}) => {
+  if (!caseId || !estudos.length) return;
+
+  const estudoAtivo = document.querySelector(`.estudo-caso[data-case="${caseId}"]`);
+  if (!estudoAtivo) return;
+
+  estudos.forEach((estudo) => {
+    estudo.hidden = estudo.dataset.case !== caseId;
+  });
+
+  indiceTopicos.forEach((link) => {
+    const topic = link.dataset.topic;
+    link.href = `#${caseId}-${topic}`;
+    link.classList.remove("ativo");
+  });
+
+  linksEstudos.forEach((link) => {
+    link.classList.toggle("ativo", link.dataset.caseLink === caseId);
+  });
+
+  artigoEstudos?.classList.add("pagina-interna");
+
+  if (options.scroll !== false) {
+    estudoAtivo.scrollIntoView({ behavior: options.behavior || "smooth", block: "start" });
+  }
+};
+
+const mostrarEstudoPeloHash = () => {
+  if (!location.hash) return false;
+
+  const alvo = document.querySelector(location.hash);
+  const estudo = alvo?.closest(".estudo-caso[data-case]");
+
+  if (estudo) {
+    mostrarEstudo(estudo.dataset.case, { scroll: false });
+    return true;
+  }
+
+  return false;
+};
+
+if (estudos.length && indiceTopicos.length) {
+  linksEstudos.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const caseId = link.dataset.caseLink;
+      history.pushState(null, "", link.getAttribute("href"));
+      mostrarEstudo(caseId);
+    });
+  });
+
+  indiceTopicos.forEach((link) => {
+    link.addEventListener("click", () => {
+      indiceTopicos.forEach((item) => item.classList.remove("ativo"));
+      link.classList.add("ativo");
+    });
+  });
+
+  window.addEventListener("hashchange", mostrarEstudoPeloHash);
+
+  if (!mostrarEstudoPeloHash()) {
+    mostrarEstudo(estudos[0].dataset.case, { scroll: false });
+  }
+}

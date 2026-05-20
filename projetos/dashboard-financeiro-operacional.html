@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard financeiro e operacional | Luiz Fernando de Paiva</title>
-  <link rel="stylesheet" href="../css/style.css?v=20260519-3" />
+  <link rel="stylesheet" href="../css/style.css?v=20260519-8" />
 </head>
-<body class="pagina-projeto">
+<body class="pagina-projeto pagina-estudos">
   <header class="topo">
     <nav class="menu" aria-label="Menu principal">
       <a href="../index.html#inicio" class="logo">LFP</a>
@@ -19,45 +19,161 @@
     </nav>
   </header>
 
-  <main class="secao projeto-detalhe">
-    <a class="voltar" href="../index.html#projetos">← Voltar aos projetos</a>
-    <p class="tag">Dados / BI</p>
-    <h1>Dashboard financeiro e operacional</h1>
-    <p class="descricao-principal">Painel para transformar dados de ERP, PDV e rotinas financeiras em uma visão clara de fluxo de caixa, receitas, despesas, vendas, recebíveis e inconsistências operacionais.</p>
+  <main class="projeto-docs">
+    <aside class="docs-sidebar" aria-label="Estudos de caso">
+      <a class="voltar" href="../index.html#projetos">← Voltar aos projetos</a>
+      <p class="docs-label">Dashboard financeiro</p>
+      <nav class="docs-nav docs-case-nav">
+        <a class="ativo" href="#estrutura-estudos" data-case-link="estrutura">Estrutura dos estudos</a>
+        <a href="#caso-1" data-case-link="caso-1">Estudo de Caso 1</a>
+        <a href="#caso-2" data-case-link="caso-2">Estudo de Caso 2</a>
+        <a href="#caso-3" data-case-link="caso-3">Estudo de Caso 3</a>
+        <a href="#caso-4" data-case-link="caso-4">Estudo de Caso 4</a>
+        <a href="#tecnologias-utilizadas" data-case-link="tecnologias">Tecnologias utilizadas</a>
+      </nav>
+    </aside>
 
-    <section class="projeto-bloco">
-      <h2>Contexto</h2>
-      <ul>
-          <li>Rotinas financeiras dependiam de conferências manuais e consultas separadas.</li>
-          <li>Havia necessidade de acompanhar indicadores de caixa, vendas, despesas e recebíveis com mais clareza.</li>
-          <li>A análise precisava apoiar decisões gerenciais e identificação rápida de divergências.</li>
-      </ul>
-    </section>
+    <article class="docs-artigo">
+      <p class="tag">Dados / BI • ERP • SQL</p>
+      <h1>Dashboard financeiro e operacional</h1>
+      <p class="descricao-principal">
+        Hub de estudos de caso para demonstrar análise financeira e operacional com visão de negócio, dados, ETL, KPIs, dashboard, SQL, insights e resultado final.
+      </p>
 
-    <section class="projeto-bloco">
-      <h2>Entregas</h2>
-      <ul>
-          <li>Organização das fontes de dados vindas de ERP, PDV e planilhas de apoio.</li>
-          <li>Definição de indicadores financeiros e operacionais para acompanhamento recorrente.</li>
-          <li>Estruturação de visualizações para leitura rápida de valores, tendências e pontos de atenção.</li>
-      </ul>
-    </section>
+      <section id="estrutura-estudos" class="estudo-caso docs-intro" data-case="estrutura">
+        <div class="case-heading">
+          <p class="categoria">Página inicial</p>
+          <h2>Estrutura dos estudos de caso</h2>
+          <p>Cada estudo segue uma lógica analítica completa. A ideia é mostrar não apenas o visual do dashboard, mas o raciocínio usado para transformar dados operacionais em decisão.</p>
+        </div>
+        <div class="estrutura-grid">
+          <section id="estrutura-overview"><h3>Overview</h3><p>Resumo executivo do projeto, contextualizando a análise, o cenário e o tipo de decisão apoiada.</p></section>
+          <section id="estrutura-problema"><h3>Problema</h3><p>Descrição clara da dor de negócio: consultas manuais, baixa visibilidade, inconsistências e dificuldade de acompanhamento.</p></section>
+          <section id="estrutura-objetivos"><h3>Objetivos</h3><p>Separação das metas do projeto, como consolidar KPIs, reduzir tempo de análise e facilitar tomada de decisão.</p></section>
+          <section id="estrutura-dataset"><h3>Dataset</h3><p>Apresentação das fontes: ERP B2Click, PDV, planilhas Excel, arquivos CSV e bases auxiliares.</p></section>
+          <section id="estrutura-etl"><h3>ETL</h3><p>Processo de extração, limpeza, padronização, modelagem e preparação dos dados para análise.</p></section>
+          <section id="estrutura-kpis"><h3>KPIs</h3><p>Indicadores simulados ou reais para evidenciar leitura financeira e operacional.</p></section>
+          <section id="estrutura-dashboard"><h3>Dashboard</h3><p>Área para prints, imagens, GIFs, carousel ou zoom do painel construído.</p></section>
+          <section id="estrutura-sql"><h3>SQL</h3><p>Consultas usadas para extrair, validar, agrupar ou investigar dados do ERP e das rotinas financeiras.</p></section>
+          <section id="estrutura-insights"><h3>Insights</h3><p>Interpretação analítica dos dados, indicando padrões, anomalias e oportunidades de melhoria.</p></section>
+          <section id="estrutura-resultado"><h3>Resultado</h3><p>Conclusão do estudo, destacando impacto, clareza gerencial e melhoria no acompanhamento.</p></section>
+          <section id="estrutura-proximos-passos"><h3>Próximos passos</h3><p>Evoluções possíveis: API, automação de ETL, atualização em tempo real e alertas automáticos.</p></section>
+        </div>
+      </section>
 
-    <section class="projeto-bloco">
-      <h2>Tecnologias e práticas</h2>
-      <div class="chips">
-          <span>Power BI</span>
-          <span>SQL</span>
-          <span>Excel/Sheets</span>
-          <span>ERP B2Click</span>
-          <span>Indicadores</span>
-      </div>
-    </section>
+      <section id="caso-1" class="estudo-caso" data-case="caso-1">
+        <div class="case-heading"><p class="categoria">Estudo de Caso 1</p><h2>Fluxo de caixa gerencial</h2><p>Controle do caixa realizado e previsto, com leitura por período, categoria e origem da movimentação.</p></div>
+        <section id="caso-1-overview" class="docs-secao"><h3>Overview</h3><p>Projeto desenvolvido para centralizar indicadores financeiros provenientes de ERP, PDV e controles auxiliares, permitindo acompanhar entradas, saídas e saldo com maior clareza.</p></section>
+        <section id="caso-1-problema" class="docs-secao"><h3>Problema</h3><p>As rotinas dependiam de consultas manuais e dificultavam a identificação rápida de inconsistências, recebíveis, fluxo de caixa e evolução financeira.</p><ul><li>Conferências dispersas em diferentes fontes.</li><li>Tempo elevado para fechamento financeiro.</li><li>Baixa visibilidade sobre variações diárias.</li></ul></section>
+        <section id="caso-1-objetivos" class="docs-secao"><h3>Objetivos</h3><ul><li>Consolidar KPIs financeiros.</li><li>Melhorar leitura operacional do caixa.</li><li>Reduzir tempo de análise.</li><li>Facilitar tomada de decisão.</li></ul></section>
+        <section id="caso-1-dataset" class="docs-secao"><h3>Dataset</h3><div class="tabela-resumo"><div><strong>ERP B2Click</strong><span>Contas, lançamentos, categorias e pagamentos.</span></div><div><strong>PDV</strong><span>Vendas diárias e formas de pagamento.</span></div><div><strong>Planilhas</strong><span>Ajustes, previsões e controles auxiliares.</span></div><div><strong>CSV</strong><span>Extratos exportados para conferência.</span></div></div></section>
+        <section id="caso-1-etl" class="docs-secao"><h3>ETL</h3><ol class="lista-etl"><li>Extração dos lançamentos financeiros.</li><li>Limpeza de duplicidades e campos vazios.</li><li>Padronização de categorias.</li><li>Modelagem por data, unidade e tipo.</li><li>Criação de KPIs.</li><li>Publicação no dashboard.</li></ol><p class="fluxo-etl">ERP → SQL → Power BI → Dashboard</p></section>
+        <section id="caso-1-kpis" class="docs-secao"><h3>KPIs</h3><div class="kpi-grid"><div><span>Receita Total</span><strong>R$ 1,2M</strong></div><div><span>Despesas</span><strong>R$ 860k</strong></div><div><span>Saldo Projetado</span><strong>R$ 340k</strong></div><div><span>Variação Mensal</span><strong>+12%</strong></div></div></section>
+        <section id="caso-1-dashboard" class="docs-secao"><h3>Dashboard</h3><div class="dashboard-preview"><span>Imagem do dashboard</span><strong>Fluxo de caixa por período, categoria e origem</strong><p>Espaço reservado para print grande, GIF, zoom ou carousel do painel.</p></div></section>
+        <section id="caso-1-sql" class="docs-secao"><h3>SQL</h3><pre class="sql-bloco"><code>SELECT
+    categoria,
+    SUM(valor) AS total
+FROM financeiro_lancamentos
+WHERE data_movimento BETWEEN '2024-01-01' AND '2024-12-31'
+GROUP BY categoria
+ORDER BY total DESC;</code></pre></section>
+        <section id="caso-1-insights" class="docs-secao"><h3>Insights</h3><ul><li>Março apresentou maior volume financeiro.</li><li>Despesas operacionais cresceram nos períodos de maior venda.</li><li>Diferenças de caixa se concentraram no fechamento noturno.</li></ul></section>
+        <section id="caso-1-resultado" class="docs-secao"><h3>Resultado</h3><p>O dashboard centralizou indicadores financeiros e operacionais em uma única visualização, facilitando análises recorrentes e decisões de curto prazo.</p></section>
+        <section id="caso-1-proximos-passos" class="docs-secao"><h3>Próximos passos</h3><ul><li>Atualização em tempo real.</li><li>Integração com API bancária.</li><li>Alertas automáticos para saldo crítico.</li></ul></section>
+      </section>
+
+      <section id="caso-2" class="estudo-caso" data-case="caso-2">
+        <div class="case-heading"><p class="categoria">Estudo de Caso 2</p><h2>Recebíveis e cartões</h2><p>Análise de vendas em cartão, valores previstos, taxas, recebimentos e divergências de conciliação.</p></div>
+        <section id="caso-2-overview" class="docs-secao"><h3>Overview</h3><p>Estudo criado para acompanhar recebíveis de cartões e comparar vendas registradas com valores liquidados.</p></section>
+        <section id="caso-2-problema" class="docs-secao"><h3>Problema</h3><p>A conciliação entre PDV, adquirentes e extrato bancário exigia conferências manuais e dificultava localizar divergências rapidamente.</p></section>
+        <section id="caso-2-objetivos" class="docs-secao"><h3>Objetivos</h3><ul><li>Comparar previsto versus recebido.</li><li>Identificar divergências por bandeira.</li><li>Apoiar fechamento financeiro.</li></ul></section>
+        <section id="caso-2-dataset" class="docs-secao"><h3>Dataset</h3><div class="tabela-resumo"><div><strong>PDV</strong><span>Vendas por cartão e forma de pagamento.</span></div><div><strong>Adquirente</strong><span>Agenda de recebíveis, taxas e liquidações.</span></div><div><strong>Banco</strong><span>Extratos de crédito e conciliação.</span></div></div></section>
+        <section id="caso-2-etl" class="docs-secao"><h3>ETL</h3><p class="fluxo-etl">PDV → CSV → SQL → Power BI</p><ul><li>Padronização de bandeiras e datas.</li><li>Cálculo de taxas e líquido previsto.</li><li>Junção com extrato bancário.</li></ul></section>
+        <section id="caso-2-kpis" class="docs-secao"><h3>KPIs</h3><div class="kpi-grid"><div><span>Recebíveis</span><strong>R$ 210k</strong></div><div><span>Cartões na receita</span><strong>63%</strong></div><div><span>Divergências</span><strong>R$ 8,4k</strong></div><div><span>Taxa média</span><strong>2,7%</strong></div></div></section>
+        <section id="caso-2-dashboard" class="docs-secao"><h3>Dashboard</h3><div class="dashboard-preview"><span>Imagem do dashboard</span><strong>Recebíveis por bandeira, adquirente e data</strong><p>Área para inserir print do painel e filtros principais.</p></div></section>
+        <section id="caso-2-sql" class="docs-secao"><h3>SQL</h3><pre class="sql-bloco"><code>SELECT
+    bandeira,
+    SUM(valor_bruto) AS bruto,
+    SUM(valor_liquido) AS liquido
+FROM recebiveis_cartao
+GROUP BY bandeira
+ORDER BY liquido DESC;</code></pre></section>
+        <section id="caso-2-insights" class="docs-secao"><h3>Insights</h3><ul><li>Cartões concentraram a maior parte da receita.</li><li>Divergências apareceram principalmente em antecipações.</li><li>Algumas taxas ficaram acima do padrão esperado.</li></ul></section>
+        <section id="caso-2-resultado" class="docs-secao"><h3>Resultado</h3><p>A análise reduziu o esforço de conferência e trouxe rastreabilidade para valores previstos, recebidos e divergentes.</p></section>
+        <section id="caso-2-proximos-passos" class="docs-secao"><h3>Próximos passos</h3><ul><li>Automatizar importação da adquirente.</li><li>Criar alertas para divergências acima do limite.</li><li>Registrar histórico de correções.</li></ul></section>
+      </section>
+
+      <section id="caso-3" class="estudo-caso" data-case="caso-3">
+        <div class="case-heading"><p class="categoria">Estudo de Caso 3</p><h2>Vendas, despesas e margens</h2><p>Cruzamento de vendas com despesas para leitura de margem, sazonalidade e pressão operacional.</p></div>
+        <section id="caso-3-overview" class="docs-secao"><h3>Overview</h3><p>Estudo para observar desempenho financeiro combinando receita, custos e despesas em uma visão executiva.</p></section>
+        <section id="caso-3-problema" class="docs-secao"><h3>Problema</h3><p>Vendas e despesas eram analisadas separadamente, dificultando enxergar margem e impacto operacional por período.</p></section>
+        <section id="caso-3-objetivos" class="docs-secao"><h3>Objetivos</h3><ul><li>Consolidar vendas e despesas.</li><li>Calcular margem gerencial.</li><li>Identificar períodos críticos.</li></ul></section>
+        <section id="caso-3-dataset" class="docs-secao"><h3>Dataset</h3><div class="tabela-resumo"><div><strong>ERP</strong><span>Despesas e categorias financeiras.</span></div><div><strong>PDV</strong><span>Vendas por período e unidade.</span></div><div><strong>Planilhas</strong><span>Metas e classificações auxiliares.</span></div></div></section>
+        <section id="caso-3-etl" class="docs-secao"><h3>ETL</h3><p class="fluxo-etl">ERP + PDV → SQL → Modelo estrela → Power BI</p></section>
+        <section id="caso-3-kpis" class="docs-secao"><h3>KPIs</h3><div class="kpi-grid"><div><span>Receita</span><strong>R$ 980k</strong></div><div><span>Margem</span><strong>18%</strong></div><div><span>Custos</span><strong>R$ 620k</strong></div><div><span>Ticket Médio</span><strong>R$ 74</strong></div></div></section>
+        <section id="caso-3-dashboard" class="docs-secao"><h3>Dashboard</h3><div class="dashboard-preview"><span>Imagem do dashboard</span><strong>Vendas, despesas e margem por mês</strong><p>Espaço para print com linha do tempo e composição de despesas.</p></div></section>
+        <section id="caso-3-sql" class="docs-secao"><h3>SQL</h3><pre class="sql-bloco"><code>SELECT
+    mes,
+    SUM(receita) AS receita,
+    SUM(despesa) AS despesa,
+    SUM(receita) - SUM(despesa) AS margem_valor
+FROM resultado_mensal
+GROUP BY mes
+ORDER BY mes;</code></pre></section>
+        <section id="caso-3-insights" class="docs-secao"><h3>Insights</h3><ul><li>Custos operacionais cresceram 18% no trimestre.</li><li>A margem caiu nos meses com maior despesa variável.</li><li>Algumas categorias concentraram impacto recorrente.</li></ul></section>
+        <section id="caso-3-resultado" class="docs-secao"><h3>Resultado</h3><p>O estudo ajudou a visualizar relação entre faturamento, despesas e margem, apoiando decisões sobre custos e planejamento.</p></section>
+        <section id="caso-3-proximos-passos" class="docs-secao"><h3>Próximos passos</h3><ul><li>Adicionar metas por unidade.</li><li>Automatizar comparação com orçamento.</li><li>Incluir projeção de margem.</li></ul></section>
+      </section>
+
+      <section id="caso-4" class="estudo-caso" data-case="caso-4">
+        <div class="case-heading"><p class="categoria">Estudo de Caso 4</p><h2>Conciliação e inconsistências</h2><p>Monitoramento de diferenças entre caixa, ERP, PDV, recebíveis e extratos para priorizar correções.</p></div>
+        <section id="caso-4-overview" class="docs-secao"><h3>Overview</h3><p>Estudo voltado à qualidade dos dados financeiros, destacando divergências que precisam de revisão antes do fechamento.</p></section>
+        <section id="caso-4-problema" class="docs-secao"><h3>Problema</h3><p>Inconsistências entre sistemas dificultavam o fechamento financeiro e consumiam tempo da equipe em investigações manuais.</p></section>
+        <section id="caso-4-objetivos" class="docs-secao"><h3>Objetivos</h3><ul><li>Localizar divergências por origem.</li><li>Priorizar correções.</li><li>Melhorar confiabilidade dos relatórios.</li></ul></section>
+        <section id="caso-4-dataset" class="docs-secao"><h3>Dataset</h3><div class="tabela-resumo"><div><strong>Caixa</strong><span>Fechamentos e movimentações diárias.</span></div><div><strong>ERP/PDV</strong><span>Registros de vendas e lançamentos.</span></div><div><strong>Banco</strong><span>Créditos, débitos e extratos.</span></div></div></section>
+        <section id="caso-4-etl" class="docs-secao"><h3>ETL</h3><p class="fluxo-etl">Caixa → Padronização → Regras de validação → Alertas</p></section>
+        <section id="caso-4-kpis" class="docs-secao"><h3>KPIs</h3><div class="kpi-grid"><div><span>Pendências</span><strong>37</strong></div><div><span>Valor divergente</span><strong>R$ 12,8k</strong></div><div><span>Casos críticos</span><strong>6</strong></div><div><span>Resolvidos</span><strong>82%</strong></div></div></section>
+        <section id="caso-4-dashboard" class="docs-secao"><h3>Dashboard</h3><div class="dashboard-preview"><span>Imagem do dashboard</span><strong>Mapa de inconsistências por origem e prioridade</strong><p>Área para print da matriz de divergências e filtros de investigação.</p></div></section>
+        <section id="caso-4-sql" class="docs-secao"><h3>SQL</h3><pre class="sql-bloco"><code>SELECT
+    origem,
+    COUNT(*) AS ocorrencias,
+    SUM(valor_diferenca) AS valor_total
+FROM inconsistencias_financeiras
+WHERE status = 'PENDENTE'
+GROUP BY origem
+ORDER BY valor_total DESC;</code></pre></section>
+        <section id="caso-4-insights" class="docs-secao"><h3>Insights</h3><ul><li>Divergências ocorreram principalmente em fechamento noturno.</li><li>Poucas categorias concentraram a maior parte do valor divergente.</li><li>Padronização de registros reduziu reincidências.</li></ul></section>
+        <section id="caso-4-resultado" class="docs-secao"><h3>Resultado</h3><p>A análise organizou pendências, facilitou priorização e aumentou a confiabilidade dos dados usados no fechamento.</p></section>
+        <section id="caso-4-proximos-passos" class="docs-secao"><h3>Próximos passos</h3><ul><li>Criar alertas por e-mail.</li><li>Gerar fila automática de pendências.</li><li>Integrar logs de correção.</li></ul></section>
+      </section>
+
+      <section id="tecnologias-utilizadas" class="estudo-caso" data-case="tecnologias">
+        <div class="case-heading"><p class="categoria">Stack</p><h2>Tecnologias utilizadas</h2><p>Ferramentas e práticas recorrentes nos estudos de caso.</p></div>
+        <div class="chips chips-grandes"><span>Power BI</span><span>SQL</span><span>MySQL</span><span>Excel</span><span>Google Sheets</span><span>CSV</span><span>ERP B2Click</span><span>PDV</span><span>ETL</span><span>Modelagem de Dados</span><span>KPIs</span><span>Conciliação Financeira</span></div>
+      </section>
+    </article>
+
+    <aside class="docs-indice" aria-label="Nesta página">
+      <p>Nesta página</p>
+      <a href="#estrutura-overview" data-topic="overview">Overview</a>
+      <a href="#estrutura-problema" data-topic="problema">Problema</a>
+      <a href="#estrutura-objetivos" data-topic="objetivos">Objetivos</a>
+      <a href="#estrutura-dataset" data-topic="dataset">Dataset</a>
+      <a href="#estrutura-etl" data-topic="etl">ETL</a>
+      <a href="#estrutura-kpis" data-topic="kpis">KPIs</a>
+      <a href="#estrutura-dashboard" data-topic="dashboard">Dashboard</a>
+      <a href="#estrutura-sql" data-topic="sql">SQL</a>
+      <a href="#estrutura-insights" data-topic="insights">Insights</a>
+      <a href="#estrutura-resultado" data-topic="resultado">Resultado</a>
+      <a href="#estrutura-proximos-passos" data-topic="proximos-passos">Próximos passos</a>
+    </aside>
   </main>
 
-  <script src="../js/script.js"></script>
+  <script src="../js/script.js?v=20260519-7"></script>
 </body>
 </html>
+
+
 
 
 
