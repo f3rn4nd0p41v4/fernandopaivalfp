@@ -96,3 +96,57 @@ if (estudos.length && indiceTopicos.length) {
     mostrarEstudo(estudos[0].dataset.case, { scroll: false });
   }
 }
+
+const destacarSql = (codigo) => {
+  let html = codigo
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  html = html.replace(/('[^']*')/g, '<span class="sql-string">$1</span>');
+  html = html.replace(/\b(SUM|COUNT|AVG|MIN|MAX|COALESCE|ROUND)\b/g, '<span class="sql-function">$1</span>');
+  html = html.replace(/\b(SELECT|FROM|WHERE|GROUP BY|ORDER BY|HAVING|JOIN|LEFT JOIN|INNER JOIN|ON|AS|AND|OR|BETWEEN|DESC|ASC|CREATE VIEW)\b/g, '<span class="sql-keyword">$1</span>');
+  html = html.replace(/\b(\d+(?:\.\d+)?)\b/g, '<span class="sql-number">$1</span>');
+
+  return html;
+};
+
+const criarPainelSql = () => {
+  document.querySelectorAll("pre.sql-bloco").forEach((pre) => {
+    if (pre.closest(".sql-demo")) return;
+
+    const code = pre.querySelector("code");
+    const codigo = pre.textContent.trim();
+    const painel = document.createElement("div");
+    painel.className = "sql-demo";
+
+    const topo = document.createElement("div");
+    topo.className = "sql-demo-topo";
+
+    const titulo = document.createElement("span");
+    titulo.textContent = "SQL";
+
+    const acoes = document.createElement("div");
+    acoes.className = "sql-demo-acoes";
+
+    const copiar = document.createElement("button");
+    copiar.className = "sql-copy";
+    copiar.type = "button";
+    copiar.textContent = "Copy";
+    copiar.addEventListener("click", async () => {
+      await navigator.clipboard.writeText(codigo);
+      copiar.textContent = "Copied";
+      setTimeout(() => {
+        copiar.textContent = "Copy";
+      }, 1600);
+    });
+
+    acoes.appendChild(copiar);
+    topo.append(titulo, acoes);
+    if (code) code.innerHTML = destacarSql(codigo);
+    pre.parentNode.insertBefore(painel, pre);
+    painel.append(topo, pre);
+  });
+};
+
+criarPainelSql();

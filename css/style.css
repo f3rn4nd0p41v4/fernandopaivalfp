@@ -896,15 +896,85 @@ h3 {
   max-width: 520px;
 }
 
-.sql-bloco {
+.sql-demo {
   margin-top: 22px;
+  overflow: hidden;
+  border: 1px solid #555b63;
+  border-radius: 4px;
+  background: #2b2f34;
+}
+
+.sql-demo-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 50px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #555b63;
+  background: #151719;
+}
+
+.sql-demo-topo span {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.sql-demo-acoes {
+  display: flex;
+  gap: 8px;
+}
+
+.sql-copy {
+  border: 1px solid #f5f5f5;
+  border-radius: 4px;
+  background: transparent;
+  color: #ffffff;
+  padding: 8px 12px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sql-copy:hover {
+  background: #ffffff;
+  color: #151719;
+}
+
+.sql-bloco {
+  margin: 0;
   overflow: auto;
-  border: 1px solid var(--line);
-  background: #09090b;
+  border: none;
+  background: #2b2f34;
   padding: 22px;
   color: #f4f4f5;
-  font-size: 15px;
-  line-height: 1.7;
+  font-family: Consolas, "Cascadia Code", "Courier New", monospace;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.sql-bloco code {
+  color: inherit;
+  font: inherit;
+}
+
+.sql-keyword {
+  color: #5eead4;
+}
+
+.sql-function {
+  color: #f472b6;
+}
+
+.sql-string {
+  color: #a7f3d0;
+}
+
+.sql-number {
+  color: #93c5fd;
 }
 
 .fluxo-etl {
@@ -951,4 +1021,5 @@ h3 {
 .docs-artigo.pagina-interna .estudo-caso {
   margin-top: 54px;
 }
+
 
